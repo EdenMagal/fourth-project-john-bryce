@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="pannel">
+        <div>
+            <button (click)="_cart.showCart()" *ngIf="_users.user?.role == 'user' ">🛒</button>
+            <button (click)="_products.getAllProducts()">All products</button>
+            <button *ngFor="let category of _categories.categories"
+                (click)="_products.getProductsByCategory(category.categoryId)">{{category.name}}</button>
+        </div>
+        <form>
+            <input type="text" placeholder="search product" #search>
+            <button (click)="_products.searchProducts(search.value);search.value=''">🔍</button>
+        </form>
+    </div>
+    <button (click)="_admin.funcOpenAdd()" *ngIf="_users.user?.role == 'admin' " class="cartBtn">➕</button>
+    <app-cart *ngIf="_cart.toShowCart"></app-cart>
+    <app-products [ngClass]="_cart.toShowCart ? 'cartOpen' : 'cartClosed' "></app-products>
+</div>
+
+<app-add *ngIf="_admin.openAdd"></app-add>

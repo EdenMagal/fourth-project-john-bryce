@@ -1,0 +1,16 @@
+.edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    background-color: white;
+    position: fixed;
+    top: 25vh;
+    bottom: 25vh;
+    right: 25vw;
+    left: 25vw;
+    height: auto !important;
+    border: 1px solid black;
+    border-radius: 10px;
+}

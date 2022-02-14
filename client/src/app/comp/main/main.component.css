@@ -1,0 +1,46 @@
+app-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+app-cart {
+    width: 25%;
+}
+
+.cartOpen {
+    width: 75%;
+}
+
+.cartClosed {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cartBtn {
+    position: absolute;
+    top: 52px;
+    left: 5px;
+}
+
+
+.pannel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 50px;
+    background-color: white;
+}
+
+.pannel > div > button {
+    margin: 3px;
+}
+

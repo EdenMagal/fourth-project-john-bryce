@@ -1,0 +1,37 @@
+<div class="orderComp">
+    <button (click)="backToStore()" class="backToStore">Back to store</button>
+    <div class="recipt">
+        <h1>My cart</h1>
+        <div class="search">
+            <input type="text" placeholder="search" #text [(ngModel)]="query">
+        </div>
+        <div>
+            <div *ngFor="let product of _cart.cartProducts" class="product">
+                <p [innerHTML]="highlight(product.name + 'X' + product.amount.toString())">{{product.name}} X
+                    {{product.amount}}</p>
+                <p [innerHTML]="highlight(product.totalPrice.toString() + '$')">{{product.totalPrice}}$</p>
+            </div>
+        </div>
+        <div class="total">
+            <p>total price:</p>
+            <p>{{_cart.cartTotal}}$</p>
+        </div>
+    </div>
+    <div class="orderInfo">
+        <h1>Order</h1>
+        <input type="text" [value]="_users.city" (dblclick)="_users.getShippingInfo()" placeholder="city" #city>
+        <input type="text" [value]="_users.street" (dblclick)="_users.getShippingInfo()" placeholder="street" #street>
+        <input type="date" #date>
+        <input type="number" placeholder="card info - 16 digits" #creditCard>
+        <p class="error">{{error}}</p>
+        <button (click)="order(city.value,street.value,date.value,+creditCard.value)">Order</button>
+    </div>
+</div>
+
+<div *ngIf="orderPopUp" class="popUp">
+    <h2>Order placed!</h2>
+    <div>
+        <button (click)="onExportJson()">Download recipt</button>
+        <button (click)="backToStore()">Back to store</button>
+    </div>
+</div>

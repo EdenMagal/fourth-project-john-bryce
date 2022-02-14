@@ -1,0 +1,24 @@
+<div class="prod">
+    <div>
+        <img [src]="product?.imgUrl">
+    </div>
+    <div class="description">
+        <h4>{{product?.name}}</h4>
+        <p>{{product?.price}}$</p>
+        <div *ngIf="_users.user?.role=='user'">
+            <button (click)="funcOpenAmount()">add to cart</button>
+        </div>
+        <div *ngIf="_users.user?.role=='admin'">
+            <button (click)="funcOpenEdit()">Edit</button>
+            <app-edit *ngIf="openEdit" [product]="product" (closeEditEvent)="funcCloseEdit()"></app-edit>
+        </div>
+    </div>
+    <form>
+        <div class="amount" *ngIf="openAmount">
+            <button (click)="funcCloseAmount()" class="exitBtn">✖</button>
+            <p>how many of this item would you like to order?</p>
+            <input type="number" placeholder="number of items" #amount>
+            <button (click)="addToCart(+amount.value)">add to cart</button>
+        </div>
+    </form>
+</div>

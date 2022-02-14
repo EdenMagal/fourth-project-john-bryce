@@ -1,0 +1,36 @@
+.cart {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.cartBtns {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 25%;
+    align-items: center;
+    background-color: #F0131E;
+}
+
+.cartBtns>div>button {
+    border: 1px solid white;
+}
+
+.cartBtns>h3 {
+    color: white;
+}
+
+.cartcomp {
+    position: relative;
+    width: 100%;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    align-items: center;
+    margin-top: 90px;
+}

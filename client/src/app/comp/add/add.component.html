@@ -1,0 +1,18 @@
+<form>
+    <div class="add">
+        <h2>Add product</h2>
+        <button (click)="_admin.funcCloseAdd()" class="exitBtn">✖</button>
+        <label>Product name:</label>
+        <input type="text" placeholder="product name" #name>
+        <label>Product price:</label>
+        <input type="number" placeholder="product price" #price>
+        <label>Link to image:</label>
+        <input type="text" placeholder="img url" #imgUrl>
+        <label>Select category:</label>
+        <select #category>
+            <option *ngFor="let category of _categories.categories" [value]="category.categoryId">{{category.name}}
+            </option>
+        </select>
+        <button (click)="_admin.addProduct(name.value,+price.value,imgUrl.value,+category.value)">Add product</button>
+    </div>
+</form>

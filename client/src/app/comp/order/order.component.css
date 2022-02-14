@@ -1,0 +1,60 @@
+.orderComp {
+    display: flex;
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    padding-top: 100px;
+}
+
+.recipt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.orderInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.backToStore {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.product {
+    width: 250px;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.popUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    background-color: white;
+    position: fixed;
+    top: 25vh;
+    bottom: 25vh;
+    right: 25vw;
+    left: 25vw;
+    height: auto !important;
+    border: 1px solid black;
+    border-radius: 10px;
+}

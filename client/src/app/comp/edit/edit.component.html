@@ -1,0 +1,20 @@
+<form>
+    <div class="edit">
+        <h2>Edit product</h2>
+        <button (click)="funcCloseEdit()" class="exitBtn">✖</button>
+        <label>Product name:</label>
+        <input type="text" [value]="product?.name" #name>
+        <label>Link to image:</label>
+        <input type="text" [value]="product?.imgUrl" #imgUrl>
+        <label>Product price:</label>
+        <input type="number" [value]="product?.price" #price>
+        <label>Category:</label>
+        <select #category>
+            <option *ngFor="let category of _categories.categories" [value]="category.categoryId">{{category.name}}
+            </option>
+        </select>
+        <button
+            (click)="_admin.editProduct(product?.productId,name.value,+price.value,imgUrl.value,+category.value);funcCloseEdit()">Save
+            changes</button>
+    </div>
+</form>

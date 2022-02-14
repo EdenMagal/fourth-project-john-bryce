@@ -1,0 +1,13 @@
+<div class="cartcomp">
+   <h1>my Cart</h1>
+   <div class="cart">
+      <app-cart-item *ngFor="let product of _cart.cartProducts" [product]="product"></app-cart-item>
+   </div>
+   <div class="cartBtns">
+      <h3>total price: {{_cart.cartTotal}}$</h3>
+      <div>
+         <button (click)="goToOrder()">order</button>
+         <button (click)="_cart.emptyCart()">empty cart</button>
+      </div>
+   </div>
+</div>

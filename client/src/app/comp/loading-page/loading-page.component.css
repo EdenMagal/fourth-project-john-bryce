@@ -1,0 +1,41 @@
+.r-l-w {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 50px);
+}
+
+.amountOf {
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comics > img {
+    width: 250px;
+    height: 250px;
+}
+
+#comicR {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    bottom: 0;
+}
+
+#comicL {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    bottom: 0;
+}

@@ -1,0 +1,22 @@
+img {
+    height: 249px;
+    width: 200px;
+    border-bottom: 1px solid black ;
+}
+
+.prod {
+    display: flex;
+    border: 1px solid black;
+    height: 250px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.description {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,14 @@
+<div class="prod">
+    <div>
+        <img [src]="product?.imgUrl">
+    </div>
+    <div class="description">
+        <h4>{{product?.name}}</h4>
+        <p>{{product?.amount}} items</p>
+        <p>{{product?.totalPrice}}$</p>
+        <div>
+            <button (click)="_cart.removeItem(product?.productId)">remove item</button>
+        </div>
+
+    </div>
+</div>

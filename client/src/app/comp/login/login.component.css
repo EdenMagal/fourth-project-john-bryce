@@ -1,0 +1,14 @@
+.login {
+    margin-top: 5px;
+    border: 1px solid black;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login > input {
+    padding: 5px 3px;
+}

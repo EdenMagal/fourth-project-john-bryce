@@ -1,0 +1,8 @@
+.scroll {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    justify-content: center;
+    margin-top: 80px;
+}

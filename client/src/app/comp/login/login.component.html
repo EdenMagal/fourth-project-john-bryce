@@ -1,0 +1,9 @@
+<form>
+<div class="login">
+    <h2>LOGIN</h2>
+        <input type="text" placeholder="username" #username>
+        <input type="password" placeholder="password" #password>
+        <a routerLink="/landing/register">Don't have an account ? register !</a>
+        <button (click)="_users.login(username.value,password.value)">Login</button>
+    </div>
+</form>
